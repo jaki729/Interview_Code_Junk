@@ -16,17 +16,21 @@ do until the pointers low and high meet each other.
     else                       // x is on the left side
         high = mid - 1
 '''
-def BinarySearch(nums,x,l,r):
-    if r>l:
-        mid=l+(r-l)//2
-        if nums[mid]==x:
+def BinarySearch(nums,x,low,high):
+    while low <= high:
+
+        mid = low + (high - low)//2
+
+        if nums[mid] == x:
             return mid
-        elif nums[mid]>x:
-            return BinarySearch(nums,x,l,mid-1)
+
+        elif nums[mid] < x:
+            low = mid + 1
+
         else:
-            return BinarySearch(nums,x,mid+1,r)
-    else:
-        return -1
+            high = mid - 1
+
+    return -1
 
 print(' Enter some numbers. Type \'stop\' to stop input.')
 nums=[]
