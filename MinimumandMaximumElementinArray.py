@@ -1,4 +1,4 @@
-https://practice.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1
+
 def getMinMax( a, n):
     if(n%2==0):
         mx=max(a[0],a[1])
