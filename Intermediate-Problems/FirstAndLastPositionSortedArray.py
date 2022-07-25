@@ -1,3 +1,5 @@
+#tc=O(log n)
+#sc=O(1)
 class Solution:
 def searchRange(self, nums: List[int], target: int) -> List[int]:
     left=self.first(nums,target)
