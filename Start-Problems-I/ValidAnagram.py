@@ -16,3 +16,9 @@ class Solution:
             if count_s[c]!=count_t.get(c,0):
                 return False
         return True
+
+#m3
+from collections import Counter
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        return collections.Counter(s)==collections.Counter(t)
