@@ -4,13 +4,15 @@
 #Dynamic programming
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
-        size=len(nums)
-        msf=nums[0]
-        curr_max=nums[0]
-        for i in range(1,size):
-            curr_max=max(nums[i],curr_max+nums[i])
-            msf=max(msf,curr_max)
-        return msf
+        maxSubArr=nums[0]
+        current_sum=0
+        for i in nums:
+            if current_sum<0:
+                current_sum=0
+            current_sum+=i
+            maxSubArr=max(maxSubArr,current_sum)
+        return maxSubArr
+    
 #Greedy
 from sys import maxsize
 class Solution:
