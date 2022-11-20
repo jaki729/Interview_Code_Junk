@@ -8,3 +8,5 @@ Interview Questions DSA Sheet -:
 * [Sheet-3](https://docs.google.com/spreadsheets/d/1DUbQbe6LE5iFGXVMRg1CpwpZKAS92zPE5cGgtDCJBJ0/edit?usp=sharing)
 
 * [Sheet-4](https://neetcode.io/)
+
+* [Sheet-5](https://docs.google.com/spreadsheets/d/1QjuwzwoL5SKBngrhQPqFTXspvXKNwhKehHSzL3DpOW4/edit?usp=sharing)
