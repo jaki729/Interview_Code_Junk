@@ -23,3 +23,8 @@ class Solution:
             cur_sum+=i
             max_sub=max(max_sub,cur_sum)
         return max_sub
+'''
+The above technique used is sliding window protocol which gives an effeciency of O(n)
+OR
+The other technique used can be using 3 for loops(cubic solution) and 2 loops(quadratic solution) and storing the current sum of the sub array.
+'''
