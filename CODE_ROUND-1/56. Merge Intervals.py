@@ -20,8 +20,8 @@ class Solution:
         intervals.sort(key = lambda i : i[0]) #sort by start
         ans=[intervals[0]] #to avoid edge cases
 
-        for start,end in intervals[1:]: #taking the end value
-            last_end=ans[-1][1] # getting the end value of most recent interval
+        for start,end in intervals[1:]: # iterating by taking the start and end of the end value
+            last_end=ans[-1][1] # getting the end value of most recent merged interval
             if start <= last_end: # if overlapping
                 ans[-1][1] = max(last_end, end) # we merge the intervals
             else:
