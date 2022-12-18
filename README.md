@@ -1,7 +1,7 @@
 # CodeJunk
 Interview Questions DSA Sheet -: 
 
-* [Sheet-1](https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/)
+* [Sheet-1](https://takeuforward.org/strivers-a2z-dsa-course/strivers-a2z-dsa-course-sheet-2/)
 
 * [Sheet-2](https://docs.google.com/spreadsheets/d/1MGVBJ8HkRbCnU6EQASjJKCqQE8BWng4qgL0n3vCVOxE/edit#gid=0)
 
