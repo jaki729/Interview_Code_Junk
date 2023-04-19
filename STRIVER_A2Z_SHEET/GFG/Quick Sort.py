@@ -28,18 +28,39 @@ class Solution:
         # swap the pivot with the element at i+1 index to place the pivot in its final position
         arr[i+1], arr[high] = arr[high], arr[i+1]
         return i+1
-#{ 
- # Driver Code Starts
-#Initial Template for Python 3
+'''
+Hoare partition code
+#!/usr/bin/env python
+# coding=utf-8
+import math
 
-if __name__ == "__main__":
-    t=int(input())
-    for i in range(t):
-        n=int(input())
-        arr=list(map(int,input().split()))
-        Solution().quickSort(arr,0,n-1)
-        for i in range(n):
-            print(arr[i],end=" ")
-        print()
+def merge(items, p, q, r):
+    L = items[p:q+1]
+    R = items[q+1:r+1]
+    i = j = 0
+    k = p
+    while i < len(L) and j < len(R):
+        if(L[i] < R[j]):
+            items[k] = L[i]
+            i += 1
+        else:
+            items[k] = R[j]
+            j += 1
+        k += 1
+    if(j == len(R)):
+        items[k:r+1] = L[i:]
 
-# } Driver Code Ends
+
+
+def mergesort(items, p, r):
+    if(p < r):
+        q = math.floor((p+r)/2)
+        mergesort(items, p, q)
+        mergesort(items, q+1, r)
+        merge(items, p, q, r)
+
+
+items = [4,3,2,1,17]
+mergesort(items, 0, len(items)-1)
+print items
+'''
