@@ -32,35 +32,34 @@ class Solution:
 Hoare partition code
 #!/usr/bin/env python
 # coding=utf-8
-import math
 
-def merge(items, p, q, r):
-    L = items[p:q+1]
-    R = items[q+1:r+1]
-    i = j = 0
-    k = p
-    while i < len(L) and j < len(R):
-        if(L[i] < R[j]):
-            items[k] = L[i]
-            i += 1
+def quicksort(items, p, r):
+    if p < r:
+        q = partition(items, p, r)
+        quicksort(items, p, q)
+        quicksort(items, q+1, r)
+
+def partition(items, p, r):
+    x = items[p]
+    i = p - 1
+    j = r + 1
+    while True:
+        
+        while True:
+            j = j - 1
+            if items[j] <= x:
+                break
+        while True:
+            i = i + 1
+            if items[i] >= x:
+                break
+        if i < j:
+            items[i],items[j] = items[j],items[i]
         else:
-            items[k] = R[j]
-            j += 1
-        k += 1
-    if(j == len(R)):
-        items[k:r+1] = L[i:]
+            return j
 
 
-
-def mergesort(items, p, r):
-    if(p < r):
-        q = math.floor((p+r)/2)
-        mergesort(items, p, q)
-        mergesort(items, q+1, r)
-        merge(items, p, q, r)
-
-
-items = [4,3,2,1,17]
-mergesort(items, 0, len(items)-1)
+items = [13,19,9,5,12,8,7,4,11,2,6,21]
+quicksort(items, 0, len(items)-1)
 print items
 '''
