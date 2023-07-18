@@ -26,4 +26,9 @@ class Solution:
         j += 1
         
         return j
-      
+
+#method 2
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> List[int]:
+        nums[:]= sorted(set(nums))
+        return len(nums)
